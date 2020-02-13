@@ -1,6 +1,6 @@
 # MI-GRBL-Z-AXIS-Servo-Controller
 
-###Overview
+### Overview
 This plug-in allows for servo up or down.  Here is a description of the features of the plug-in.
 
 * Servo down:  The command for move servo down.  For example, M03 or M106.
