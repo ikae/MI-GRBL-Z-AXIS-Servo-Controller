@@ -2921,7 +2921,6 @@ class laser_gcode(inkex.Effect):
             for  node in i :
                 if node.get('gcodetools') == "Gcodetools orientation point arrow":
                     point[0] = self.apply_transforms(node,inkex.paths.CubicSuperPath(node.get("d")))[0][0][1]
-#                    point[0] = self.apply_transforms(node,cubicsuperpath.parsePath(node.get("d")))[0][0][1]
                 if node.get('gcodetools') == "Gcodetools orientation point text":
                     r = re.match(r'(?i)\s*\(\s*(-?\s*\d*(?:,|\.)*\d*)\s*;\s*(-?\s*\d*(?:,|\.)*\d*)\s*;\s*(-?\s*\d*(?:,|\.)*\d*)\s*\)\s*',node.text)
                     point[1] = [float(r.group(1)),float(r.group(2)),float(r.group(3))]
@@ -3050,7 +3049,6 @@ class laser_gcode(inkex.Effect):
 
         self.check_dir() 
         gcode = ""
-#        biarc_group = etree.SubElement( self.selected_paths.keys()[0] if len(self.selected_paths.keys())>0 else self.layers[0], inkex.addNS('g','svg') )
         biarc_group = etree.SubElement( list(self.selected_paths.keys())[0] if len(self.selected_paths.keys())>0 else self.layers[0], inkex.addNS('g','svg') )
         print_(("self.layers=",self.layers))
         print_(("paths=",paths))
@@ -3189,4 +3187,4 @@ class laser_gcode(inkex.Effect):
         self.laser()
 
 e = laser_gcode()
-e.run()     
+e.run()
