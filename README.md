@@ -3,7 +3,7 @@
 ### Overview
 This plug-in allows for servo up or down.  Here is a description of the features of the plug-in.
 
-***This version/branch of the plugin was written for Inkscape 1.0.2 and updated for Python3 changes. This version allows for use with newer versions of Inkscape which are compatible with newer system architechtures. It is recommended to use this version of the plugin or newer.***
+***This version/branch of the plugin was written for Inkscape 1.x and updated for Python3 changes. This version allows for use with newer versions of Inkscape which are compatible with newer system architechtures. It is recommended to use this version of the plugin or newer.***
 
 * Servo down:  The command for move servo down.  For example, M03 or M106.
 * Servo up: The command for move servo up.  For example, M05 or M107.
