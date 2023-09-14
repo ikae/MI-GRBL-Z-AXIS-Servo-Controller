@@ -3,6 +3,8 @@
 ### Overview
 This plug-in allows for servo up or down.  Here is a description of the features of the plug-in.
 
+***This version/branch of the plugin was written for Inkscape 1.0.2 and updated for Python3 changes. This version allows for use with newer versions of Inkscape which are compatible with newer system architechtures. It is recommended to use this version of the plugin or newer.***
+
 * Servo down:  The command for move servo down.  For example, M03 or M106.
 * Servo up: The command for move servo up.  For example, M05 or M107.
 * X axis speed (mm/min):  The speed of the X axis mm/min.
@@ -22,3 +24,7 @@ M5          (turn servo off)
 M3 S125     (turn servo half way)
 M3 S0       (turn servo on full off - similar to M5)
 ```
+
+### Installation
+
+To manually install a new extension, download (from the releases section of this project) and unpack the `servo.inx` and `servo.py` files. Copy the files into the directory listed at `Edit` > `Preferences` > `System: User extensions`. After a restart of Inkscape, the new extension will be available.
