@@ -2465,12 +2465,12 @@ class laser_gcode(inkex.Effect):
             keys = [0]
             while len(k)>0:
                 end = p[keys[-1]][-1][1]
-                dist = None
+                dist = 0
                 for i in range(len(k)):
                     start = p[k[i]][0][1]
-                    dist = max(   ( -( ( end[0]-start[0])**2+(end[1]-start[1])**2 ) ,i)    ,   dist )
-                keys += [k[dist[1]]]
-                del k[dist[1]]
+                    dist = max( ( -( (end[0]-start[0])**2 + (end[1]-start[1])**2) ,i    ,   dist ) )
+                keys.extend([k[dist]])
+                del k[dist]
             for k in keys:
                 subpath = p[k]
                 c += [ [    [subpath[0][1][0],subpath[0][1][1]]   , 'move', 0, 0] ]
